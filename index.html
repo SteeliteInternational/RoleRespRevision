@@ -32,7 +32,8 @@ and open the template in the editor.
         </section>
     
     
-  
+    
+        <p id="demo"> </p>
 
 
     
@@ -51,8 +52,60 @@ target="hidden_iframe" onsubmit="submitted=true;">
       
 
     
-  <p><label for="EffectiveDate">Effective Date of Change:</label>
-  <input id="entry.418070078" name="entry.418070078" type="date" value=""/></p>
+<p><label for="EffectiveDate">Effective Date of Change:</label>   
+  <select name="entry.418070078" id="entry.418070078">
+  <option> Month </option>
+	<option value="January">January</option>
+	<option value="Febuary">Febuary</option>
+	<option value="March">March</option>
+	<option value="April">April</option>
+	<option value="May">May</option>
+	<option value="June">June</option>
+	<option value="July">July</option>
+	<option value="August">August</option>
+	<option value="September">September</option>
+	<option value="October">October</option>
+	<option value="November">November</option>
+	<option value="December">December</option>
+</select>
+  
+  <select name="entry.1858708817" id="entry.1858708817">
+	<option>  Day  </option>
+	<option value="01">1</option>
+	<option value="02">2</option>
+	<option value="03">3</option>
+	<option value="04">4</option>
+	<option value="05">5</option>
+	<option value="06">6</option>
+	<option value="07">7</option>
+	<option value="08">8</option>
+	<option value="09">9</option>
+	<option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12">12</option>
+	<option value="13">13</option>
+	<option value="14">14</option>
+	<option value="15">15</option>
+	<option value="16">16</option>
+	<option value="17">17</option>
+	<option value="18">18</option>
+	<option value="19">19</option>
+	<option value="20">20</option>
+	<option value="21">21</option>
+	<option value="22">22</option>
+	<option value="23">23</option>
+	<option value="24">24</option>
+	<option value="25">25</option>
+	<option value="26">26</option>
+	<option value="27">27</option>
+	<option value="28">28</option>
+	<option value="29">29</option>
+	<option value="30">30</option>
+	<option value="31">31</option>
+</select>
+  
+  <input id="entry.660520734" name="entry.660520734" type="text" value="YYYY"/></p>    
+   </p>
 
   <p><label for="Account">Account:</label>
   <input id="entry.907412464" name="entry.907412464" type="text" value=""/></p>
@@ -89,17 +142,20 @@ target="hidden_iframe" onsubmit="submitted=true;">
   </select></p>
   
       
-  <p><label for="TodayDate">Today's Date:</label>
-  <input id="entry.927980503" name="entry.927980503" type="date" value=""/></p>
+
 
   
   <div>
-    <p style="float: right;"><img src="http://us.steelite.com/skin/frontend/default/steelite/images/footer_logo.png" height="200px" width="200px" border="1px"></p>
+  
+
+<input type="submit" value="Submit" onClick="window.location.reload()">
 
 
-  <input type="submit"  value="Submit">
 
-</div>
+  <center><p><img src="http://us.steelite.com/skin/frontend/default/steelite/images/footer_logo.png" alt="us.steelite.com"  ></p></center>
+
+  
+  </div>
 
 <!--
  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
@@ -115,10 +171,19 @@ target="hidden_iframe" onsubmit="submitted=true;">
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript"> var submitted=false;</script>
 <script type="text/javascript">
-$('#gform').on('submit', function(e) {
-  $('#gform *').fadeOut(2000);
-  $('#gform').prepend('Your submission has been processed...');
-  });
+//$('#gform').on('submit', function(e) {
+//  $('#gform *').fadeOut(2000);
+//  $('#gform').prepend('Your submission has been processed...');
+//  });
+
+document.getElementById("myBtn").onclick = hide;
+
+function hide() {
+  //$('#gform').hide();
+  
+   document.getElementById("demo").innerHTML = "Thank you for submitting"
+}
+ 
 </script>
   
 
